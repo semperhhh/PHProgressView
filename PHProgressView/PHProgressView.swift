@@ -50,7 +50,9 @@ class PHProgressView: UIView {
         var start: CGFloat = 0
         var end: CGFloat = 0
         for line in progressLines {
+                        
             end = self.bounds.width * line.ratio + start
+            print("start = \(start), end = \(end)")
             let shapeLayer: CAShapeLayer = CAShapeLayer()
             let path = CGMutablePath()
             path.move(to: CGPoint(x: start, y: self.bounds.height / 2))
@@ -60,7 +62,7 @@ class PHProgressView: UIView {
             shapeLayer.strokeColor = line.color.cgColor
             self.layer.addSublayer(shapeLayer)
             
-            start += end
+            start += (end - start)
 
             if hasAnimation {
                 

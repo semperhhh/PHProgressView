@@ -26,8 +26,10 @@ class ViewController: UIViewController {
         
         print("1")
         
-        progress.progressAdd([PHProgressLine(ratio: 0.5, color: .blue),
-        PHProgressLine(ratio: 0.4, color: .green)], true)
+        progress.progressAdd([
+            PHProgressLine(ratio: 0.3, color: .blue),
+            PHProgressLine(ratio: 0.2, color: .green),
+            PHProgressLine(ratio: 0.5, color: .yellow)], true)
         
         print("2")
 
@@ -39,9 +41,6 @@ class ViewController: UIViewController {
         }
         
         print("3")
-        
-        
-        progress.progressAdd([PHProgressLine(ratio: 0.7, color: .yellow)], true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
